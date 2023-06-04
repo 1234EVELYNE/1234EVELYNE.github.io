@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <div class="header">
+    <div class="topic">Login</div>
+    <div class="header-body">
+      <div class="logo"></div>
+      <div class="selects">
+        <div class="icon shop"></div>
+        <div class="icon menu"></div>
+      </div>
+      <div class="srh">
+        <div class="left"></div>
+        <input type="text" class="inp" placeholder="Search for message">
+      </div>
+      <ul class="navbar">
+        <li class="item">Life style
+          <ul class="item-hover-class">
+            <li>Men</li>
+            <li>Women</li>
+            <li>Work</li>
+            <li>Accessories</li>
+          </ul>
+
+        </li>
+        <li class="item">Men
+          <ul class="item-hover-class">
+            <li>Men</li>
+            <li>Women</li>
+            <li>Work</li>
+            <li>Accessories</li>
+          </ul>
+        </li>
+        <li class="item">Women
+          <ul class="item-hover-class">
+            <li>Men</li>
+            <li>Women</li>
+            <li>Work</li>
+            <li>Accessories</li>
+          </ul>
+        </li>
+        <li class="item">Work</li>
+        <li class="item">Accessories</li>
+        <li class="item">Last chance</li>
+        <li class="item">New Arrivals</li>
+      </ul>
+      <div class="content">
+        <div class="slogan">Waterproof boots<br />Work and play all the live long day.</div>
+        <div class="btn">
+          <a href="./other/index.html">continue</a>
+        </div>
+      </div>
+    </div>
+    <div id="shoes-wrapper">
+      <div class="scroll-content">
+        <div class="scroll-item">
+          <img src="./imgs/shoe1.png" alt="">
+        </div>
+        <div class="scroll-item">
+          <img src="./imgs/shoe2.png" alt="">
+        </div>
+        <div class="scroll-item">
+          <img src="./imgs/shoe3.png" alt="">
+        </div>
+        <div class="scroll-item">
+          <img src="./imgs/shoe3.png" alt="">
+        </div>
+        <div class="scroll-item">
+          <img src="./imgs/shoe4.png" alt="">
+        </div>
+        <div class="scroll-item">
+          <img src="./imgs/shoe5.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="col_l">
+      <h3>Subscribe</h3>
+      <input type="text" placeholder="email address"><br>
+      <div class="signup btn">sign me up</div>
+    </div>
+    <div class="col_m">
+      <h3>Need help ?</h3>
+      <div class="btn-list">
+        <div class="btn">help center</div>
+        <div class="btn">Returns&Exchanges</div>
+        <div class="btn">orderStatus</div>
+      </div>
+    </div>
+    <div class="col_r">
+      <h3>More information</h3>
+      <div class="link-list">
+        <a href="javascript:;">Find a store</a>
+        <a href="javascript:;">Returns</a>
+        <a href="javascript:;">Gift cards</a>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/@better-scroll/core@latest/dist/core.min.js"></script>
+  <script>
+    let wrapper = document.getElementById("shoes-wrapper");
+    let bs = new BScroll(wrapper, {
+      scrollX: true,
+    })
+  </script>
+  <script src="js/jquery-3.6.4.min.js"></script>
+  <script>
+    $(function () {
+      $(".scroll-item img").click(function () {
+        location.href = "details.html";
+      })
+    })
+  </script>
+</body>
+
+</html>
