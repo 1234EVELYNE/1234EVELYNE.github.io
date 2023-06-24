@@ -44,25 +44,28 @@
         </div>
         <h3 class="tips">Click for a closer look</h3>
         <div class="figs">
-          <div class="item"><img src="imgs/fig1.png" data-id="1" alt=""></div>
+          <div class="item sure"><img src="imgs/fig1.png" data-id="1" alt="">
+          </div>
           <div class="item"><img src="imgs/fig2.png" data-id="2" alt=""></div>
           <div class="item"><img src="imgs/fig3.png" data-id="3" alt=""></div>
         </div>
       </div>
       <div class="info-panel">
         <h3 class="title">2344 Tradeswoman</h3>
-        <p class="intro">Women's 6-inch Brown Non-Metaillic Toe Waterproof BOA Work Boot</p>
+        <p class="intro">Women's 6-inch Brown Non-Metaillic Toe Waterproof BOA
+          Work Boot</p>
         <div class="review">
           <div class="stars"></div>
           <p>write a review</p>
         </div>
         <div class="price">$249.99</div>
-        <h4 class="tips">or 4 interest-free payments of $45.00 with afterpay</h4>
-        <div class="area">US</div>
+        <h4 class="tips">or 4 interest-free payments of $45.00 with afterpay
+        </h4>
+        <!-- <div class="area">US</div> -->
         <div class="size-wrapper">
           <div class="size" data-size="5">05</div>
           <div class="size" data-size="6">06</div>
-          <div class="size" data-size="7">07</div>
+          <div class="size sure" data-size="7">07</div>
           <div class="size" data-size="8">08</div>
           <div class="size" data-size="9">09</div>
           <div class="size" data-size="10">10</div>
@@ -70,6 +73,8 @@
           <div class="size" data-size="12">12</div>
         </div>
         <div class="add-btn">ADD TO CART</div>
+        <br>
+        <div class="buy-btn">Buy</div>
         <div class="guide">size guide</div>
       </div>
       <div class="order-panel">
@@ -100,27 +105,52 @@
       </div>
     </div>
   </div>
-  <script src="js/jquery-3.6.4.min.js"></script>
   <script>
-    $(function () {
-      $(".figs .item").click(function() {
+    document.querySelectorAll(".figs .item").forEach(function (item) {
+      item.addEventListener("click", function () {
         const id = this.children[0].getAttribute("data-id");
-        $("#show-img")[0].src = `imgs/fig${id}.png`;
-        $(".dot").each((idx, el) => {
-          el.className = "dot";
+        document.querySelector("#show-img").src = `imgs/fig${id}.png`;
+        document.querySelectorAll(".dot").forEach(function (dot, idx) {
+          dot.classList.remove("active");
+          if (idx === id - 1) {
+            dot.classList.add("active");
+          }
+        });
+        document.querySelectorAll(".figs .item").forEach((dot, idx) => {
+          dot.classList.remove("sure");
+          if (idx === id - 1) {
+            dot.classList.add("sure");
+          }
         })
-        $(".dot").get(id-1).className = "dot active";
-      })
-      $(".size-wrapper .size").click(function() {
-        const size = this.getAttribute("data-size");
-        $("#size").text(size);
-      })
-      $(".add-btn").click(function() {
-        $(".order-panel").show();
-      })
-      $(".order-panel .btn").click(function() {
-        $(".order-panel").hide();
-      })
+      });
+    });
+
+    document.querySelectorAll(".size-wrapper .size").forEach(function (size) {
+      size.addEventListener("click", function () {
+        document.querySelectorAll(".size-wrapper .size").forEach((ele) => {
+          ele.classList = 'size';
+        })
+        this.classList = 'sure size'
+        const sizeValue = this.getAttribute("data-size");
+        document.querySelector("#size").textContent = sizeValue;
+      });
+    });
+
+    document.querySelectorAll(".add-btn").forEach(function (addBtn) {
+      addBtn.addEventListener("click", function () {
+        document.querySelector(".order-panel").style.display = "block";
+      });
+    });
+
+    document.querySelectorAll(".order-panel .btn").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        document.querySelector(".order-panel").style.display = "none";
+      });
+    });
+    /* buy */
+    document.querySelector('.buy-btn').addEventListener('click', function () {
+      alert('buy success')
+      window.location.href = '/index.html'
     })
   </script>
 </body>

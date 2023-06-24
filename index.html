@@ -23,25 +23,21 @@
         <input type="text" class="inp" placeholder="Search for message">
       </div>
       <ul class="navbar">
-        <li class="item">Life style
-          <ul class="item-hover-class">
-            <li>Men</li>
-            <li>Women</li>
-            <li>Work</li>
-            <li>Accessories</li>
-          </ul>
-
-        </li>
-        <li class="item">Men
-          <ul class="item-hover-class">
+        <li class="item">Life style <ul class="item-hover-class">
             <li>Men</li>
             <li>Women</li>
             <li>Work</li>
             <li>Accessories</li>
           </ul>
         </li>
-        <li class="item">Women
-          <ul class="item-hover-class">
+        <li class="item">Men <ul class="item-hover-class">
+            <li>Men</li>
+            <li>Women</li>
+            <li>Work</li>
+            <li>Accessories</li>
+          </ul>
+        </li>
+        <li class="item">Women <ul class="item-hover-class">
             <li>Men</li>
             <li>Women</li>
             <li>Work</li>
@@ -54,32 +50,20 @@
         <li class="item">New Arrivals</li>
       </ul>
       <div class="content">
-        <div class="slogan">Waterproof boots<br />Work and play all the live long day.</div>
+        <div class="slogan">Waterproof boots<br />Work and play all the live
+          long day.</div>
         <div class="btn">
           <a href="./other/index.html">continue</a>
         </div>
       </div>
     </div>
     <div id="shoes-wrapper">
-      <div class="scroll-content">
-        <div class="scroll-item">
-          <img src="./imgs/shoe1.png" alt="">
-        </div>
-        <div class="scroll-item">
-          <img src="./imgs/shoe2.png" alt="">
-        </div>
-        <div class="scroll-item">
-          <img src="./imgs/shoe3.png" alt="">
-        </div>
-        <div class="scroll-item">
-          <img src="./imgs/shoe3.png" alt="">
-        </div>
-        <div class="scroll-item">
-          <img src="./imgs/shoe4.png" alt="">
-        </div>
-        <div class="scroll-item">
-          <img src="./imgs/shoe5.png" alt="">
-        </div>
+      <div class="pngline">
+        <div class="png"><img src="./imgs/shoe1.png" alt=""></div>
+        <div class="png"><img src="./imgs/shoe2.png" alt=""></div>
+        <div class="png"><img src="./imgs/shoe3.png" alt=""></div>
+        <div class="png"><img src="./imgs/shoe4.png" alt=""></div>
+        <div class="png"><img src="./imgs/shoe5.png" alt=""></div>
       </div>
     </div>
   </div>
@@ -106,21 +90,6 @@
       </div>
     </div>
   </div>
-  <script src="https://unpkg.com/@better-scroll/core@latest/dist/core.min.js"></script>
-  <script>
-    let wrapper = document.getElementById("shoes-wrapper");
-    let bs = new BScroll(wrapper, {
-      scrollX: true,
-    })
-  </script>
-  <script src="js/jquery-3.6.4.min.js"></script>
-  <script>
-    $(function () {
-      $(".scroll-item img").click(function () {
-        location.href = "details.html";
-      })
-    })
-  </script>
 </body>
 
 </html>

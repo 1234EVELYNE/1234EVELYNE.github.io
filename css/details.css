@@ -3,7 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-ul, li {
+ul,
+li {
   list-style: none;
 }
 body {
@@ -103,24 +104,26 @@ body {
   margin: 50px auto;
   padding: 20px 30px 50px;
 }
-.main .img-panel{
+.main .img-panel {
   float: left;
   width: 60%;
   height: 100%;
   padding: 20px;
   padding-right: 100px;
-  border-radius: 30px;
   background: lightgray;
   border-radius: 30px;
 }
 .img-panel .image-board {
-  width: 550px;
+  width: 650px;
   height: 370px;
   position: relative;
+  background-color: #fff;
 }
-.image-board img#show-img {
-  width: 100%;
-  height: 100%;
+.img-panel .image-board img#show-img {
+  width: 340px;
+  height: auto;
+  margin: 10px auto;
+  display: block;
   border-radius: 30px;
 }
 .image-board .dots {
@@ -135,8 +138,7 @@ body {
 .image-board .dots .dot {
   width: 10px;
   height: 10px;
-  border-radius: 50%;
-  background: #c8b4ad;
+  background: #ccc;
 }
 .image-board .dots .dot.active {
   background: #000;
@@ -156,6 +158,14 @@ body {
   border-radius: 30px;
   overflow: hidden;
   cursor: pointer;
+  transition: all 0.6s;
+}
+.figs .item.sure {
+  border: 10px solid #cbb6b1;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 0;
 }
 .figs .item img {
   width: 100%;
@@ -170,7 +180,7 @@ body {
   border-radius: 30px;
   padding: 50px 15px;
 }
-.info-panel .title{
+.info-panel .title {
   font-size: 32px;
 }
 .info-panel .intro {
@@ -180,7 +190,7 @@ body {
 .info-panel .review {
   height: 30px;
 }
-.info-panel .review .stars{
+.info-panel .review .stars {
   float: left;
   width: 160px;
   height: 30px;
@@ -228,6 +238,13 @@ body {
   background: #cbb6b1;
   cursor: pointer;
 }
+.size-wrapper .size.sure {
+  border: 2px solid #cbb6b1;
+  box-sizing: border-box;
+  color: #ab9a93;
+  font-weight: bold;
+  background-color: #fff;
+}
 .info-panel .add-btn {
   text-align: center;
   font-weight: bold;
@@ -237,6 +254,31 @@ body {
   line-height: 50px;
   background-color: #cbb6b1;
   cursor: pointer;
+}
+.add-btn,
+.buy-btn {
+  transition: all 0.6s;
+}
+.info-panel .buy-btn {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  height: 50px;
+  border-radius: 25px;
+  line-height: 50px;
+  border: 1px solid #cbb6b1;
+  color: #cbb6b1;
+  cursor: pointer;
+}
+.add-btn:hover {
+  opacity: 0.8;
+  border-radius: 0;
+}
+.buy-btn:hover {
+  opacity: 0.8;
+  border-radius: 0;
+  background-color: #cbb6b1;
+  color: #fff;
 }
 .info-panel .guide {
   text-align: right;
